@@ -3,6 +3,7 @@ const dados = [];
 const foto = document.getElementById("foto");
 const mensagem = document.getElementById("mensagem");
 const cor = document.getElementById("cor");
+const paragrafo = document.getElementById("paragrafo")
 
 function clicou() {
     var nome = document.getElementById("nome").value;
@@ -18,18 +19,19 @@ function clicou() {
     dados.push(infos);
 
     if (nome && senha && data) {
+        document.getElementById("nome").value = "";
+        document.getElementById("senha").value = "";
+        document.getElementById("data").value = "";
+        
+        cor.classList.remove('escondido');
+        mensagem.classList.remove('escondido');
+        foto.classList.remove('escondido');
+        paragrafo.classList.remove('escondido');
+
         alert("Olá " + nome + "!\n" +
             "Senha: " + senha + "\n" +
             "Data: " + data + "\n" +
             "Seus dados foram salvos com sucesso.");
-
-            document.getElementById("nome").value = "";
-            document.getElementById("senha").value = "";
-            document.getElementById("data").value = "";
-
-            cor.classList.remove('escondido');
-            mensagem.classList.remove('escondido');
-            foto.classList.remove('escondido');
     } else {
         alert("Por favor, preencha todos os campos antes de enviar!");
     }
