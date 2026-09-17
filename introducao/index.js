@@ -3,7 +3,14 @@ const dados = [];
 const foto = document.getElementById("foto");
 const mensagem = document.getElementById("mensagem");
 const cor = document.getElementById("cor");
-const paragrafo = document.getElementById("paragrafo")
+const paragrafo = document.getElementById("paragrafo");
+const cadastro = document.getElementById("cadastro");
+const botaoCadastro = document.getElementById("botaoCadastro");
+
+function cadastrar() {
+    cadastro.classList.remove('dados');
+    botaoCadastro.classList.add('escondido');    
+}
 
 function clicou() {
     var nome = document.getElementById("nome").value;
@@ -22,7 +29,8 @@ function clicou() {
         document.getElementById("nome").value = "";
         document.getElementById("senha").value = "";
         document.getElementById("data").value = "";
-        
+
+        cadastro.classList.add('escondido');
         cor.classList.remove('escondido');
         mensagem.classList.remove('escondido');
         foto.classList.remove('escondido');
