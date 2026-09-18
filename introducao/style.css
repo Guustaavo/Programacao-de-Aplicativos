@@ -35,8 +35,9 @@ button {
     background-color: rgba(165, 42, 42, 0.377);
     color: rgba(0, 0, 0, 0.527);
     padding: 16px;
-    transition: padding 2s;
+    transition: padding 0.3s ease;
     box-shadow: 10px;
+    cursor: pointer;
 }
 
 #digite-seu-nome {
