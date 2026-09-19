@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title> SENAI Dev. Cyber (Gustavo) </title>
+</head>
+
+<header>
+    <h1> Programação de Aplicativos: Gustavo's Code </h1>
+</header>
+
+<body>
+    <!-- <h2> Matéria nova!!! 14/09/2026 </h2>
+    <h3> Hoje estamos aprendendo HTML. </h3> -->
+
+    <div class="main">
+
+        <br>
+        <!-- <p> Caixa de texto </p> -->
+        
+        <div class="escolha" id="menu-inicial">
+            <button id="botaoCadastro" class="" onclick="cadastrar()">Cadastrar</button>
+        </div>
+        
+        <div class="dados" id="cadastro">
+            <h2 id="digite-seu-nome">Preencha:</h2>
+            <input type="text" id="nome" placeholder="digite seu nome">
+
+            <br>
+            <!-- <p> Caixa de senha </p> -->
+            <input type="password" id="senha" placeholder="digite sua senha">
+
+            <br>
+            <!-- <p> Caixa de data </p> -->
+            <input type="datetime-local" id="data">
+            
+            <br>
+            <!-- <p> Botão </p> -->
+            <button id="botao" onclick="clicou()"> Clique aqui para salvar </button>
+        </div>
+
+        <div>
+            <br>
+            <h4 id="mensagem" class="escondido">Seja bem-vindo ao Winner's Site!</h4>
+
+            
+            <!-- <p> Parágrafo </p> -->
+            <p id="paragrafo" class="escondido">Selecione sua cor favorita para ficar de plano de fundo!</p>
+
+            <!-- <p> Caixa de cor </p> -->
+            <input type="color" id="cor" class="escondido">
+
+            <br>
+            <br>
+            <!-- <p> Imagem </p> -->
+            <img id="foto" class="escondido" src="https://github.com/Guustaavo.png" alt="">
+
+            <br>
+        </div>
+    </div>
+    <!-- <script>
+        // caso o index.js não existisse, poderíamos fazer o script direto aqui.
+    </script> -->
+</body>
+
+</html>

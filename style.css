@@ -1,0 +1,75 @@
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgba(68, 14, 14, 0.527);
+    text-align: center;
+    margin-top: 0px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 150px;
+    height: 40px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+header {    
+    display: flex;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(248, 75, 75, 0.336);
+    color: rgba(0, 0, 0, 0.527);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    width: 175px;
+    height: 50px;
+    border-radius: 4px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background-color: rgba(165, 42, 42, 0.377);
+    color: rgba(0, 0, 0, 0.527);
+    padding: 16px;
+    transition: padding 0.3s ease;
+    box-shadow: 10px;
+    cursor: pointer;
+}
+
+#digite-seu-nome {
+    margin-top: 0px;
+}
+
+#nome {
+    margin-top: 0px;
+}
+
+#foto {
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 5px;
+    border: 4px brown;
+    object-fit: cover;
+}
+
+#cadastro {
+    background-color: rgba(248, 75, 75, 0.336);
+    border-radius: 10px;
+    padding-top: 20px;
+    height: 250px;
+    width: 325px;
+}
+
+.escondido {
+    display: none;
+}
+
+.dados {
+    display: none;
+}
