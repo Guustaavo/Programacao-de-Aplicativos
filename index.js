@@ -1,21 +1,24 @@
 const dados = [];
 
-const foto = document.getElementById("foto");
-const mensagem = document.getElementById("mensagem");
-const cor = document.getElementById("cor");
-const paragrafo = document.getElementById("paragrafo");
-const cadastro = document.getElementById("cadastro");
-const botaoCadastro = document.getElementById("botaoCadastro");
+const main = document.getElementById("divMain")
+const menuInicial = document.getElementById("divMenuInicial");
+const cadastro = document.getElementById("divCadastro");
+const login = document.getElementById("divLogin");
 
 function cadastrar() {
-    cadastro.classList.remove('dados');
-    botaoCadastro.classList.add('escondido');    
+    cadastro.classList.remove("escondido");
+    menuInicial.classList.add("escondido");
 }
 
-function clicou() {
-    var nome = document.getElementById("nome").value;
-    var senha = document.getElementById("senha").value;
-    var data = document.getElementById("data").value;
+function entrar() {
+    login.classList.remove("escondido");
+    menuInicial.classList.add("escondido");
+}
+
+function cadastrou() {
+    var nome = document.getElementById("inNomeCadastro").value;
+    var senha = document.getElementById("inSenhaCadastro").value;
+    var data = document.getElementById("inData").value;
 
     var infos = {
         nome,
@@ -26,15 +29,12 @@ function clicou() {
     dados.push(infos);
 
     if (nome && senha && data) {
-        document.getElementById("nome").value = "";
-        document.getElementById("senha").value = "";
-        document.getElementById("data").value = "";
+        document.getElementById("inNomeCadastro").value = "";
+        document.getElementById("inSenhaCadastro").value = "";
+        document.getElementById("inData").value = "";
 
         cadastro.classList.add('escondido');
-        cor.classList.remove('escondido');
-        mensagem.classList.remove('escondido');
-        foto.classList.remove('escondido');
-        paragrafo.classList.remove('escondido');
+        main.classList.remove('escondido');
 
         alert("Olá " + nome + "!\n" +
             "Senha: " + senha + "\n" +
@@ -43,10 +43,46 @@ function clicou() {
     } else {
         alert("Por favor, preencha todos os campos antes de enviar!");
     }
-
 }
 
-var seletorCor = document.getElementById("cor");
+function entrou() {
+    var nome = document.getElementById("inNomeLogin").value;
+    var senha = document.getElementById("inSenhaLogin").value;
+
+    dados.forEach((conta) => {
+        if (nome == conta.nome && senha == conta.senha) {
+            document.getElementById("inNomeLogin").value = "";
+            document.getElementById("inSenhaLogin").value = "";
+
+            login.classList.add('escondido');
+            main.classList.remove('escondido');
+
+            alert("Olá " + nome + "!\n" +
+                "Senha: " + senha + "\n" +
+                "Data do cadastro: " + conta.data + "\n" +
+                "Log in realizado com sucesso.");
+                return;
+        }
+    })
+    return;
+    alert("Dados incorretos.");
+}
+
+function voltou() {
+    menuInicial.classList.remove("escondido");
+    cadastro.classList.add("escondido");
+    login.classList.add("escondido");
+    main.classList.add("escondido");
+
+    document.getElementById("inNomeCadastro").value = "";
+    document.getElementById("inSenhaCadastro").value = "";
+    document.getElementById("inData").value = "";
+
+    document.getElementById("inNomeLogin").value = "";
+    document.getElementById("inSenhaLogin").value = "";
+}
+
+var seletorCor = document.getElementById("inCor");
 seletorCor.addEventListener("input", function () {
     document.body.style.backgroundColor = seletorCor.value;
-})
+});

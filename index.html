@@ -15,55 +15,57 @@
 
 <body>
     <!-- <h2> Matéria nova!!! 14/09/2026 </h2>
-    <h3> Hoje estamos aprendendo HTML. </h3> -->
+    <h3> Começamos a aprender HTML. </h3> -->
+    <div class="divAll">
 
-    <div class="main">
-
-        <br>
-        <!-- <p> Caixa de texto </p> -->
-        
-        <div class="escolha" id="menu-inicial">
-            <button id="botaoCadastro" class="" onclick="cadastrar()">Cadastrar</button>
-        </div>
-        
-        <div class="dados" id="cadastro">
-            <h2 id="digite-seu-nome">Preencha:</h2>
-            <input type="text" id="nome" placeholder="digite seu nome">
-
+        <div class="" id="divMenuInicial">
+            <button id="btCadastrar" class="" onclick="cadastrar()">Cadastrar-se</button>
             <br>
-            <!-- <p> Caixa de senha </p> -->
-            <input type="password" id="senha" placeholder="digite sua senha">
-
-            <br>
-            <!-- <p> Caixa de data </p> -->
-            <input type="datetime-local" id="data">
-            
-            <br>
-            <!-- <p> Botão </p> -->
-            <button id="botao" onclick="clicou()"> Clique aqui para salvar </button>
+            <button id="btLogin" class="" onclick="entrar()">Entrar</button>
         </div>
 
-        <div>
-            <br>
-            <h4 id="mensagem" class="escondido">Seja bem-vindo ao Winner's Site!</h4>
-
-            
-            <!-- <p> Parágrafo </p> -->
-            <p id="paragrafo" class="escondido">Selecione sua cor favorita para ficar de plano de fundo!</p>
-
-            <!-- <p> Caixa de cor </p> -->
-            <input type="color" id="cor" class="escondido">
+        <div class="escondido" id="divCadastro">
+            <h2>Preencha:</h2>
+            <input type="text" id="inNomeCadastro" placeholder="digite seu nome">
 
             <br>
-            <br>
-            <!-- <p> Imagem </p> -->
-            <img id="foto" class="escondido" src="https://github.com/Guustaavo.png" alt="">
+            <input type="password" id="inSenhaCadastro" placeholder="digite sua senha">
 
             <br>
+            <input type="datetime-local" id="inData">
+
+            <br>
+            <button id="btSalvarCadastro" onclick="cadastrou()"> Clique aqui para salvar </button>
+            <button id="btVoltar" onclick="voltou()"> Voltar </button>
+        </div>
+
+        <div class="escondido" id="divLogin">
+            <h2>Preencha:</h2>
+            <input type="text" id="inNomeLogin" placeholder="digite seu nome">
+
+            <br>
+            <input type="password" id="inSenhaLogin" placeholder="digite sua senha">
+
+            <br>
+            <button id="btEntrar" onclick="entrou()"> Clique aqui para entrar </button>
+            <button id="btVoltar" onclick="voltou()"> Voltar </button>
+        </div>
+
+        <div id="divMain" class="escondido">
+            <br>
+            <h4 id="mensagem">Seja bem-vindo ao Winner's Site!</h4>
+            <p id="paragrafo">Selecione sua cor favorita para ficar de plano de fundo!</p>
+
+            <input type="color" id="inCor">
+
+            <br>
+            <img id="foto" src="https://github.com/Guustaavo.png" alt="Foto de Perfil do GitHub Guustaavo.">
+            <br>
+            <button id="btVoltar" onclick="voltou()"> Voltar </button>
         </div>
     </div>
     <!-- <script>
-        // caso o index.js não existisse, poderíamos fazer o script direto aqui.
+        // caso o index.js não existisse, poderíamos fazer o JavaScript por aqui no próprio arquivo html, porém isso não é recomendado pelas boas práticas de programação.
     </script> -->
 </body>
 
