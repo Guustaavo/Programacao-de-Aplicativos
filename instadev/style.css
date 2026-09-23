@@ -26,6 +26,8 @@ button {
 /* Configs específicas. */
 /* A configuração que está mais abaixo sempre prevalece! */
 
+/* Barra lateral. */
+
 nav.sidebar {
     position: fixed;
     top: 0;
@@ -72,6 +74,8 @@ a.menu-item:hover {
     transform: scale(1.01);
 }
 
+/* Página principal. */
+
 main.content {
     width: 700px;
     margin-left: 300px;
@@ -109,12 +113,107 @@ div.story-border {
     align-items: center;
     margin: auto;
     border-radius: 50%;
-    background: linear-gradient(
-        45deg,
-        #feda75,
-        #fa7e1e,
-        #d62976,
-        #962fbf,
-        #4f5bb5
-    );
+    background: linear-gradient(45deg,
+            #feda75,
+            #fa7e1e,
+            #d62976,
+            #962fbf,
+            #4f5bb5);
+}
+
+/* Feed. */
+
+section.feed {
+    display: flex;
+    gap: 35px;
+    flex-direction: column;
+}
+
+article.post {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-bottom: 1px solid #73737336;
+    padding-bottom: 30px;
+}
+
+header.post-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.post-user img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+div.post-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+div.post-user div {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+div.post-user span {
+    font-size: 12px;
+    color: 737373;
+    margin-top: 2px;
+}
+
+button.more {
+    font-size: 18px;
+    background-color: transparent;
+}
+
+img.post-img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #dbdbdb;
+}
+
+div.post-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 1px;
+}
+
+div.post-actions button {
+    background-color: transparent;
+    margin-right: 10px;
+    font-size: 27px;
+}
+
+div.post-actions button:hover {
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+
+div.post-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+}
+
+div.post-info a {
+    color: #737373;
+}
+
+span.post-date {
+    margin-top: 3px;
+    font-size: 10px;
+    color: #737373;
 }
