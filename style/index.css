@@ -1,0 +1,76 @@
+/* Configs default */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafafa;
+    color: #262626;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    background-color: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Configs específicas */
+
+#divMenuInicial {
+    display: flex;
+    align-items: center;
+    gap: 200px;
+}
+
+.sidebar {
+    background-color: #f7f5f5;
+    border: solid 1px #c0c0c049;
+    align-items: center;
+    display: flex;
+    width: 500px;
+    height: 100vh;
+}
+
+.imgWinner1 {
+    padding-left: 30px;
+}
+.initialOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.initialButtons {
+    display: flex;
+    gap: 70px;
+}
+
+.initialButtons button {
+    background-color: black;
+    color: #fafafa;
+    width: 180px;
+    height: 50px;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.initialButtons button:hover {
+    background-color: rgba(7, 7, 7, 0.527);
+    transition: 0.5s;
+    transform: scale(1.01);
+}
+
+/* Para tudo que não está na tela */
+
+.escondido {
+    display: none;
+}
