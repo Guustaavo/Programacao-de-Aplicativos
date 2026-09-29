@@ -217,3 +217,63 @@ span.post-date {
     font-size: 10px;
     color: #737373;
 }
+
+/* Suggestions. */
+
+aside.suggestions {
+    position: fixed;
+    top: 45px;
+    right: 50px;
+}
+
+div.user,
+.suggestion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 30px;
+}
+
+div.user img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+div.userName,
+.userSuggested {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+div.user span,
+.suggestion span {
+    font-size: 12px;
+    color: #737373;
+}
+
+div.user a,
+.suggestion a {
+    color: #0095F6;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+div.suggestion-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #737373;
+    margin-bottom: 24px;
+}
+
+div.suggestion img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
