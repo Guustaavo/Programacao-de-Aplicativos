@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/javascript/main.js"></script>
+    <link rel="stylesheet" href="/style/main.css">
     <title>Winners Center</title>
+    <link rel="icon" type="image/png" href="imgs/crown.png">
 </head>
+
 <body>
-    
+    <aside class="profile">
+        <div class="profileHeader">
+            <img class="imgPerfil" src="" alt="Foto de Perfil">
+            <h2 class="apelido"></h2>
+            <h4 class="username"></h4>
+        </div>
+
+        <div class="profileBody">
+            <p class="description">Escreva aqui a descrição ideal para o seu perfil.</p>
+            <button id="btVoltar" onclick="voltou()">Voltar</button>
+        </div>
+        
+        <div class="escondido editProfile">
+            <label for="imgPerfil">Foto de Perfil</label>
+            <input type="image" id="imgPerfil">
+
+            <label for="apelido">Apelido</label>
+            <input type="text" id="apelido" placeholder="como as pessoas te chamam...">
+
+            <label for="description">Descrição</label>
+            <input type="text" id="description" placeholder="sobre você...">
+
+            <label for="borderColor">Cor da Borda do Perfil</label>
+            <input type="color" id="borderColor">
+
+            <button id="btSair" onclick="saiuEditProfile()">Voltar</button>
+        </div>
+    </aside>
 </body>
+
 </html>
