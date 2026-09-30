@@ -69,6 +69,83 @@ button {
     transform: scale(1.01);
 }
 
+/* Modal screen (login) */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 100;
+}
+
+.login-content,
+.cadastro-content {
+    width: 450px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.login-header,
+.cadastro-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.login-header h2,
+.cadastro-header h2 {
+    font-size: 24px;
+}
+
+.login-header button,
+.cadastro-header button {
+    font-size: 18px;
+    background: transparent;
+}
+
+.login-body,
+.cadastro-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.login-body label,
+.cadastro-body label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.login-body input,
+.cadastro-body input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    outline: none;
+}
+
+#btEntrar,
+#btSalvarCadastro {
+    width: 100%;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
 /* Para tudo que não está na tela */
 
 .escondido {

@@ -2,17 +2,15 @@ const dados = [];
 
 const main = document.getElementById("profile");
 const menuInicial = document.getElementById("divMenuInicial");
-const cadastro = document.getElementById("divCadastro");
-const login = document.getElementById("divLogin");
+const cadastro = document.getElementById("modalCadastro");
+const login = document.getElementById("modalLogin");
 
 function cadastrar() {
     cadastro.classList.remove("escondido");
-    menuInicial.classList.add("escondido");
 }
 
 function entrar() {
     login.classList.remove("escondido");
-    menuInicial.classList.add("escondido");
 }
 
 function cadastrou() {
@@ -76,7 +74,6 @@ function voltou() {
 
     document.getElementById("inNomeCadastro").value = "";
     document.getElementById("inSenhaCadastro").value = "";
-    document.getElementById("inData").value = "";
 
     document.getElementById("inNomeLogin").value = "";
     document.getElementById("inSenhaLogin").value = "";

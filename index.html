@@ -17,9 +17,9 @@
     <main class="mainAll" id="initialMain">
 
         <div class="" id="divMenuInicial">
-            <div class="sidebar">
+            <aside class="sidebar">
                 <img class="imgWinner1" src="imgs/winner.png" alt="Winner">
-            </div>
+            </aside>
 
             <nav class="initialOptions">
                 <div class="welcomeMessage">
@@ -29,28 +29,46 @@
                 </div>
 
                 <div class="initialButtons">
-                    <button id="btCadastrar" class="" onclick="cadastrar()"><Strong>Cadastrar-se</Strong></button>
-                    <button id="btLogin" class="" onclick="entrar()"><strong>Entrar</strong></button>
+                    <button id="btModalCadastrar" class="" onclick="cadastrar()"><Strong>Cadastrar-se</Strong></button>
+                    <button id="btModalLogin" class="" onclick="entrar()"><strong>Entrar</strong></button>
                 </div>
             </nav>
         </div>
 
-        <div class="escondido" id="divCadastro">
-            <h2>Preencha:</h2>
-            <input type="text" id="inNomeCadastro" placeholder="digite seu nickname">
-            <input type="password" id="inSenhaCadastro" placeholder="digite sua senha">
+        <div class="escondido modal" id="modalCadastro">
+            <div class="cadastro-content">
+                <div class="cadastro-header">
+                    <h2>Preencha:</h2>
+                    <button id="btVoltar" onclick="voltou()">X</button>
+                </div>
 
-            <button id="btSalvarCadastro" onclick="cadastrou()">Clique aqui para salvar</button>
-            <button id="btVoltar" onclick="voltou()">Voltar</button>
+                <div class="cadastro-body">
+                    <label for="inNomeCadastro">Nome de usuário</label>
+                    <input type="text" id="inNomeCadastro" placeholder="crie um nickname...">
+                    <label for="inSenhaCadastro">Nova senha</label>
+                    <input type="password" id="inSenhaCadastro" placeholder="crie uma senha...">
+
+                    <button id="btSalvarCadastro" onclick="cadastrou()">Clique aqui para salvar</button>
+                </div>
+            </div>
         </div>
 
-        <div class="escondido" id="divLogin">
-            <h2>Preencha:</h2>
-            <input type="text" id="inNomeLogin" placeholder="digite seu nickname">
-            <input type="password" id="inSenhaLogin" placeholder="digite sua senha">
+        <div class="escondido modal" id="modalLogin">
+            <div class="login-content">
+                <div class="login-header">
+                    <h2>Login</h2>
+                    <button id="btVoltar" onclick="voltou()">X</button>
+                </div>
 
-            <button id="btEntrar" onclick="entrou()">Clique aqui para entrar</button>
-            <button id="btVoltar" onclick="voltou()">Voltar</button>
+                <div class="login-body">
+                    <label for="inNomeLogin">Nome de usuário</label>
+                    <input type="text" id="inNomeLogin" placeholder="digite seu nickname...">
+                    <label for="inSenhaLogin">Senha</label>
+                    <input type="password" id="inSenhaLogin" placeholder="digite sua senha...">
+
+                    <button id="btEntrar" onclick="entrou()">Clique aqui para entrar</button>
+                </div>
+            </div>
         </div>
 
         <div class="escondido" id="profile">
