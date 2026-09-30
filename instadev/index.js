@@ -20,6 +20,12 @@ var posts = [
                 text: "Remake is coming!!!",
                 date: "2026-09-28T21:24:00"
             },
+            {
+                id: 2,
+                userName: "Kauan",
+                text: "Peak, aura demais.",
+                date: "2026-09-28T21:24:00"
+            }
         ],
     },
     {
@@ -48,12 +54,36 @@ var posts = [
 // FUNCTIONS JS
 
 const feed = document.getElementById("feed");
+const btAbrirModal = document.getElementById("btAbrirModal");
+const btFecharModal = document.getElementById("btFecharModal");
+const modalNewPost = document.getElementById("modalPost");
+
+btAbrirModal.addEventListener("click", () => {
+    modalNewPost.classList.remove("hidden");
+})
+
+btFecharModal.addEventListener("click", () => {
+    modalNewPost.classList.add("hidden");
+})
 
 function renderPosts() {
     feed.innerHTML = "";
 
     posts.forEach((post) => {
         var article = document.createElement("article");
+        
+        var commentsHTML = "";
+        for (var comment of post.comments) {
+            commentsHTML += 
+            `
+                    <p class="comment">
+                        <strong>${comment.userName}</strong>
+                        ${comment.text}
+                        <a class="more-comments" href="#">...</a>
+                    </p>            
+            `
+        }
+        
         article.innerHTML = `
                 <header class="post-header">
                     <div class="post-user">
@@ -90,11 +120,7 @@ function renderPosts() {
 
                     <a class="more-comments" href="#"> Ver todos os comentários</a>
 
-                    <p class="comment">
-                        <strong>${post.comments[0].userName}</strong>
-                        ${post.comments[0].text}
-                        <a class="more-comments" href="#">...</a>
-                    </p>
+                    ${commentsHTML}
 
                     <span class="post-date">${post.date}</span>
                 </div>

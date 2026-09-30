@@ -42,7 +42,7 @@
                 Notificações
             </a>
 
-            <a href="#" class="menu-item">
+            <a href="#" class="menu-item" id="btAbrirModal">
                 <span></span>
                 Criar
             </a>
@@ -79,51 +79,7 @@
         </section>
 
         <section class="feed" id="feed">
-            <article class="post">
-                <header class="post-header">
-                    <div class="post-user">
-                        <img src="https://github.com/Guustaavo.png" alt="">
-
-                        <div>
-                            <strong>Guustaavo</strong>
-                            <span>Tijucas - SC</span>
-                        </div>
-                    </div>
-                    <button class="more">•••</button>
-                </header>
-
-                <img class="post-img" src="https://picsum.photos/seed/programacao/600/600" alt="">
-
-                <div class="post-actions">
-                    <div>
-                        <button>♡</button>
-                        <button>○</button>
-                        <button>➤</button>
-                    </div>
-                    <button>▱</button>
-                </div>
-
-                <div class="post-info">
-                    <strong>29177 curtidas</strong>
-
-                    <p>
-                        <strong>
-                            Guustaavo
-                        </strong>
-                        Jesus is the way, the truth and the life.
-                    </p>
-
-                    <a class="more-comments" href="#"> Ver todos os comentários</a>
-
-                    <p class="comment">
-                        <strong>Julia</strong>
-                        Keep going, u are the greatest one!!!
-                        <a class="more-comments" href="#">...</a>
-                    </p>
-
-                    <span class="post-date">Há 7 horas</span>
-                </div>
-            </article>
+            <!-- Posts no javascript. -->
         </section>
     </main>
 
@@ -164,6 +120,27 @@
             <a href="#">Seguir</a>
         </div>
     </aside>
+
+    <div class="modal hidden" id="modalPost">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Nova publicação</h2>
+                <button id="btFecharModal">X</button>
+            </div>
+
+            <div class="modal-body">
+                <label for="inImgPost">URL da imagem</label>
+                <input type="text" id="inImgPost" placeholder="https://...">
+
+                <label for="inLegendPost">Legenda</label>
+                <textarea type="text" id="inLegendPost" placeholder="Digite a legenda..."></textarea>
+
+                <button class="btPublicar" id="btPublicar">Publicar</button>
+            </div>
+
+        </div>
+
+    </div>
 
     <script src="index.js"> </script>
 </body>

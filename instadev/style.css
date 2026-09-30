@@ -277,3 +277,82 @@ div.suggestion img {
     height: 40px;
     border-radius: 50%;
 }
+
+/* Criar post */
+
+div.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 100;
+}
+
+div.modal-content {
+    width: 450px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+div.modal-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+div.modal-header h2 {
+    font-size: 24px;
+}
+
+div.modal-header button {
+    font-size: 18px;
+    background: transparent;
+}
+
+div.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+div.modal-body label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+div.modal-body input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    outline: none;
+}
+
+div.modal-body textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button.btPublicar {
+    width: 100%;
+    color: #ffffff;
+    background-color: #0095F6;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+div.hidden {
+    display: none;
+}
