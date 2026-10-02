@@ -25,6 +25,36 @@ button {
 
 /* Configs específicas */
 
+.profile {
+    position: fixed;
+    flex-direction: column;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    border: solid 2px yellow;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.profileHeader {
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+    background-color:#ff0000;
+}
+
+.profileHeader img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #262626;
+}
+
+.profileNickname {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Para tudo que não está na tela */
 
 .escondido {
