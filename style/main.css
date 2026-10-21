@@ -26,21 +26,32 @@ button {
 /* Configs específicas */
 
 .profile {
+    overflow: hidden;
     position: fixed;
     flex-direction: column;
     top: 10px;
     left: 10px;
     bottom: 10px;
-    border: solid 2px yellow;
+    border: solid 1px rgba(68, 64, 64, 0.096);
+    background-color: #f8f5f5;
     border-radius: 10px;
-    padding: 10px;
 }
 
 .profileHeader {
     display: flex;
-    flex-direction: row;
-    padding: 4px;
-    background-color:#ff0000;
+    flex-direction: column;
+    background-color: #fdfcfc00;
+}
+
+.profileBanner {
+    color: transparent;
+    background-color: #292828;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.profileHeader {
+    margin-left: 12px;
 }
 
 .profileHeader img {
@@ -53,6 +64,23 @@ button {
 .profileNickname {
     display: flex;
     flex-direction: column;
+}
+
+.projects {
+    position: fixed;
+    flex-direction: column;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px;
+    border: 1px solid #26262600;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    gap: 12px;
 }
 
 /* Para tudo que não está na tela */
