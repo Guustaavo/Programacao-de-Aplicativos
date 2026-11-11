@@ -1,0 +1,222 @@
+/* Configs padrão. */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0d1020;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    background-color: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Configs específicas. */
+
+/* Cabeçalho */
+
+header {
+    position: block;
+    padding: 16px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #171b30;
+}
+
+header h1 {
+    margin: 0px;
+    font-size: 25px;
+}
+
+header span {
+    color: #b58aff;
+}
+
+/* Banner */
+
+.banner {
+    margin: 25px 6% 35px;
+    padding: 26px 35px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(110deg, #51318a, #25264a);
+}
+
+.banner h2 {
+    font-size: 29px;
+    margin: 0 0 10px;
+}
+
+.banner p {
+    margin: 0 0 22px;
+    color: #e1d9f0;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #ac80ff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.banner-emoji {
+    font-size: 95px;
+}
+
+/* Catálogo */
+
+.catalogo {
+    margin: 0 6% 55px;
+}
+
+.catalogo h2 {
+    font-size: 27px;
+}
+
+.filtros {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+    margin: 25px 0;
+    flex-wrap: wrap; /* Permite as linhas em row quebrarem caso não tenha mais espaço (ao invés de se juntarem infinitamente) */
+}
+
+#busca {
+    padding: 12px;
+    width: 270px;
+    max-width: 100%;
+    border: 1px solid #414560;
+    border-radius: 8px;
+    background-color: #1d2239;
+    color: #ffffff;
+    outline: none; /* Borda ao selecionar caixa de texto */
+}
+
+.categoria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.categoria button {
+    border: 0;
+    border-radius: 8px;
+    background-color: #252a45;
+    color: #ffffff;
+    padding: 11px 15px;
+}
+
+.categoria button.ativo {
+    background-color: #875ce3;
+}
+
+/* Grade de jogos */
+
+.grade-jogos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #1b2035;
+}
+
+.capa {
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+}
+
+.conteudo-card {
+    padding: 16px;
+}
+
+.conteudo-card h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+}
+
+.conteudo-card p {
+    color: #b8dfd3;
+    font-size: 13px;
+    min-height: 30px;
+}
+
+.conteudo-card span {
+    display: inline-block;
+    color: #b8dfd3;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1000px) {
+    .grade-jogos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .grade-jogos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .banner-emoji {
+        display: none;
+    }
+
+    .banner {
+        padding: 24px;
+    }
+
+    .banner h2 {
+        font-size: 24px;
+    }
+
+    #busca {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .grade-jogos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .categoria {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .categoria button {
+        width: 100%;
+        display: flex;
+    }
+}

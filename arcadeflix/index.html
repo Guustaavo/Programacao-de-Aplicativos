@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcadeflix</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/x-icon" href="imgs/arcadeflix.png">
+    <script src="js/index.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>🎮 Arcade<span>Flix</span></h1>
+        <a href="#catalogo">Jogos</a>
+    </header>
+
+    <main>
+        <section class="banner">
+            <div>
+                <h2>Encontre seu próximo jogo!</h2>
+                <p>Explore nosso catálogo e descubra novas aventuras.</p>
+                <a href="#catalogo" class="botao">Ver jogos</a>
+            </div>
+            <div class="banner-emoji">🕹️</div>
+        </section>
+
+        <section class="catalogo" id="catalogo">
+            <h2>Catálogo de jogos</h2>
+            <div class="filtros">
+                <input id="busca" type="search" placeholder="🔍 Pesquisar jogo">
+                <div class="categoria">
+                    <button class="ativo" data-categoria="Todos">Todos</button>
+                    <button data-categoria="Aventura">Aventura</button>
+                    <button data-categoria="Corrida">Corrida</button>
+                    <button data-categoria="Estratégia">Estratégia</button>
+                </div>
+            </div>
+
+            <div id="grade-jogos" class="grade-jogos" hidden>Nenhum jogo encontrado</div>
+        </section>
+    </main>
+</body>
+
+</html>
+
