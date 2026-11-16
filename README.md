@@ -4,6 +4,9 @@
 
 **Uma página web que foi feita para quem quer aprender com quem está aprendendo!**
 
+
+<img src="./imgs/interface-example.png" width="550" alt="interface-example">
+
 </div>
 
 ---
