@@ -49,6 +49,14 @@ header span {
     color: #b58aff;
 }
 
+header button {
+    display: inline-block;
+    color: white;
+    background-color: #ffffff00;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
 /* Banner */
 
 .banner {
@@ -99,7 +107,8 @@ header span {
     gap: 15px;
     align-items: center;
     margin: 25px 0;
-    flex-wrap: wrap; /* Permite as linhas em row quebrarem caso não tenha mais espaço (ao invés de se juntarem infinitamente) */
+    flex-wrap: wrap;
+    /* Permite as linhas em row quebrarem caso não tenha mais espaço (ao invés de se juntarem infinitamente) */
 }
 
 #busca {
@@ -110,7 +119,8 @@ header span {
     border-radius: 8px;
     background-color: #1d2239;
     color: #ffffff;
-    outline: none; /* Borda ao selecionar caixa de texto */
+    outline: none;
+    /* Borda ao selecionar caixa de texto */
 }
 
 .categoria {
@@ -175,6 +185,82 @@ header span {
     margin-top: 8px;
 }
 
+/* MODAL CADASTRAR JOGO */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 100;
+}
+
+.cadastroJogo-content {
+    width: 450px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cadastroJogo-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.cadastroJogo-header h2 {
+    color: #000000;
+    font-size: 24px;
+}
+
+.cadastroJogo-header button {
+    font-size: 18px;
+    background: transparent;
+}
+
+.cadastro-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.cadastro-body label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.cadastro-body input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    outline: none;
+}
+
+#inCorJogo {
+    height: 50px;
+}
+
+#btSalvarJogo {
+    width: 100%;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+
 /* RESPONSIVIDADE */
 
 @media (max-width: 1000px) {
@@ -219,4 +305,8 @@ header span {
         width: 100%;
         display: flex;
     }
+}
+
+.hidden {
+    display: none;
 }

@@ -13,7 +13,10 @@
 <body>
     <header>
         <h1>🎮 Arcade<span>Flix</span></h1>
-        <a href="#catalogo">Jogos</a>
+        <div>
+            <button id="btCadastrarJogo" onclick="cadastrarJogo()">Adicionar novo jogo</button>
+            <a href="#catalogo">Jogos</a>
+        </div>
     </header>
 
     <main>
@@ -38,10 +41,33 @@
                 </div>
             </div>
 
+            <div class="modal hidden" id="modalCadastroJogo">
+                <div class="cadastroJogo-content">
+                    <div class="cadastroJogo-header">
+                        <h2>Cadastrar Jogo</h2>
+                        <button id="btVoltar" class="" onclick="voltouJogo()">X</button>
+                    </div>
+
+                    <div class="cadastro-body">
+                        <label for="inNomeJogo">Nome</label>
+                        <input type="text" id="inNomeJogo" placeholder="Nome do jogo...">
+                        <label for="inCategoriaJogo">Categoria</label>
+                        <input type="text" id="inCategoriaJogo" placeholder="Categoria do jogo...">
+                        <label for="inDescricaoJogo">Descrição</label>
+                        <input type="text" id="inDescricaoJogo" placeholder="Descrição do jogo...">
+                        <label for="inEmojiJogo">Emoji</label>
+                        <input type="text" id="inEmojiJogo" placeholder="Emoji do jogo...">
+                        <label for="inCorJogo">Cor</label>
+                        <input type="color" id="inCorJogo" placeholder="Cor do jogo...">
+
+                        <button id="btSalvarJogo" onclick="cadastrouJogo()">Clique aqui para salvar</button>
+                    </div>
+                </div>
+            </div>
+
             <div id="grade-jogos" class="grade-jogos" hidden>Nenhum jogo encontrado</div>
         </section>
     </main>
 </body>
 
 </html>
-
