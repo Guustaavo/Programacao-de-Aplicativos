@@ -1,0 +1,41 @@
+<!-- Another way to make the game register -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcadeflix - Cadastrar</title>
+
+    <link rel="stylesheet" href="./css/cadastrar.css">
+    <script src="./js/cadastrar.js" defer></script>
+</head>
+
+<body>
+    <main class="main">
+        <label for="nomeJogo">Nome do Jogo</label>
+        <input id="nomeJogo" type="text" placeholder="Game name...">
+
+        <label for="categoriaJogo">Categoria</label>
+        <select id="categoriaJogo">
+            <option value="" disabled selected>Selecione uma categoria</option>
+            <option value="Aventura">Aventura</option>
+            <option value="Corrida">Corrida</option>
+            <option value="Estratégia">Estratégia</option>
+        </select>
+
+        <label for="descricaoJogo">Descricao</label>
+        <input id="descricaoJogo" type="text" placeholder="Game description...">
+
+        <label for="emojiJogo">Emoji</label>
+        <input id="emojiJogo" type="text" placeholder="Game banner icon...">
+
+        <label for="corJogo">Cor</label>
+        <input id="corJogo" type="color" placeholder="Game banner color...">
+
+        <button onclick="cadastroJogo()">Adicionar ao catálogo</button>
+    </main>
+</body>
+
+</html>

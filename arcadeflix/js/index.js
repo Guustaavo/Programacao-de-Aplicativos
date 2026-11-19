@@ -19,9 +19,31 @@ let categoriaSelecionada = "Todos";
 function mostrarJogos() {
     gradeJogos.innerHTML = "";
 
-    jogos.forEach(jogo => {
+    const jogosCadastrados = JSON.parse(localStorage.getItem("jogosCadastrados")) || [];
+    const jogosCompletos = [...jogos, ...jogosCadastrados];
+
+    jogosCompletos.forEach(jogo => {
         const nomeCombina = jogo.nome.toLowerCase().includes(busca.value);
 
+        const categoriaCombina = categoriaSelecionada === "Todos" || categoriaSelecionada === jogo.categoria;
+
+        if (!categoriaCombina || !nomeCombina) {
+            return;
+        } else {
+            gradeJogos.innerHTML += `
+            <article class="card">
+                <div class="capa" style="background: ${jogo.cor}">${jogo.emoji}</div>
+                <div class="conteudo-card">
+                    <h3>${jogo.nome}</h3>
+                    <p>${jogo.descricao}</p>
+                    <span>${jogo.categoria}</span>
+                </div>
+            </article>
+            `;
+        }
+    })
+    jogos.forEach(jogo => {
+        const nomeCombina = jogo.nome.toLowerCase().includes(busca.value);
 
         const categoriaCombina = categoriaSelecionada === "Todos" || categoriaSelecionada === jogo.categoria;
 
