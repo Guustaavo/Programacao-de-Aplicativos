@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniLoja - Loja Virtual</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">🛍️ MiniLoja</div>
+        <div class="header-info">
+            <span>Minha Loja Virtual</span>
+            <span>🛒 <strong id="contador-carrinho">0</strong></span>
+        </div>
+    </header>
+    <main class="container">
+        <section class="loja">
+            <div class="titulo-secao">
+                <h1>Nossos Produtos</h1>
+                <p>Escolha seus produtos favoritos!</p>
+            </div>
+            <div id="lista-produtos" class="grid-produtos"></div>
+        </section>
+        <aside class="carrinho">
+            <h2>🛒 Meu Carrinho</h2>
+            <div id="lista-carrinho"></div>
+            <div class="resumo-carrinho">
+                <div class="linha-total">
+                    <span>Total:</span>
+                    <strong id="total-carrinho">R$ 0,00</strong>
+                </div>
+                <button id="btn-finalizar" class="btn-finalizar">Finalizar Compra</button>
+            </div>
+        </aside>
+    </main>
+</body>
+
+</html>
